@@ -27,8 +27,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 bool encoder_update_user(uint8_t index, bool clockwise) {
     if (index == 1) {
-        // Not sure why this seems to be backwards...
         if (clockwise) {
+        // I think the pins in the rev4 info.json for this keyboard are swapped. Needs further investigation.
             tap_code(KC_VOLD);
         } else {
             tap_code(KC_VOLU);
